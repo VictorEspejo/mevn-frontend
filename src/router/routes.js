@@ -10,6 +10,7 @@ const routes = [
         component: () => import("pages/ProtectedPage.vue"),
       },
       { path: "login", component: () => import("pages/LoginPage.vue") },
+      { path: "signin", component: () => import("src/pages/SigninPage.vue") },
     ],
   },
 
