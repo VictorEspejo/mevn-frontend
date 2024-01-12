@@ -15,18 +15,10 @@ jobs:
         with:
           node-version: 16.x
       - name: Install dependencies
-        run: npm install
+        run: npm install --no-audit --no-fund --no-optional
       - name: Build
         run: npm run build
-  lint:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Install Node.js
-        uses: actions/setup-node@v1
-        with:
-          node-version: 16.x
-      - name: Install dependencies
-        run: npm install
       - name: Lint
         run: npm run lint
+      - name: Test
+        run: npm run test
