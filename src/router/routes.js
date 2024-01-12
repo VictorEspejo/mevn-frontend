@@ -11,6 +11,7 @@ const routes = [
       },
       { path: "login", component: () => import("pages/LoginPage.vue") },
       { path: "signin", component: () => import("src/pages/SigninPage.vue") },
+      { path: "link", meta: { auth: true }, component: () => import("src/pages/LinkPage.vue") },
     ],
   },
 

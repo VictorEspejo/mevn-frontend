@@ -1,7 +1,7 @@
 <template>
   <q-page padding class="row justify-center">
     <div class="col-12 col-sm-6 col-md-5">
-      <h3>Login</h3>
+      <h3>Register</h3>
       <q-form @submit.prevent="submitForm">
         <q-input
           v-model="username"

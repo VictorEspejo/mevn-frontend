@@ -15,10 +15,11 @@
           Quasar App
         </q-toolbar-title>
 
-        <q-btn to="/">Inicio</q-btn>
-        <q-btn color="green" v-if="!userStore.token" to="/login">Log in</q-btn>
-        <q-btn color="orange" v-if="!userStore.token" to="/signin">Sign In</q-btn>
-        <q-btn color="red" v-else @click="logOut">LogOut</q-btn>
+        <q-btn class="q-mr-sm" to="/">Inicio</q-btn>
+        <q-btn class="q-mr-sm" color="green" v-if="!userStore.token" to="/login">Log in</q-btn>
+        <q-btn class="q-mr-sm" color="orange" v-if="!userStore.token" to="/signin">Sign In</q-btn>
+        <q-btn class="q-mr-sm" color="red" v-else @click="logOut">LogOut</q-btn>
+        <q-btn class="q-mr-sm" color="orange" v-if="userStore.token" to="/link">Crear link</q-btn>
         <q-btn v-if="userStore.token" to="/protected">Protected</q-btn>
       </q-toolbar>
     </q-header>
