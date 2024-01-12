@@ -21,6 +21,7 @@
         <q-btn class="q-mr-sm" color="red" v-else @click="logOut">LogOut</q-btn>
         <q-btn class="q-mr-sm" color="orange" v-if="userStore.token" to="/link">Crear link</q-btn>
         <q-btn v-if="userStore.token" to="/protected">Protected</q-btn>
+        <q-btn color="yellow" v-if="userStore.token" to="/links">Links</q-btn>
       </q-toolbar>
     </q-header>
 

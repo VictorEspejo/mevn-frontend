@@ -3,7 +3,6 @@ import { api } from "src/boot/axios";
 import { ref } from "vue";
 import { useUserStore } from "./user-store";
 
-
 export const useLinkStore = defineStore("link", () => {
   const userStore = useUserStore();
   const links = ref([]);
@@ -14,17 +13,17 @@ export const useLinkStore = defineStore("link", () => {
         method: "post",
         url: "links",
         headers: {
-          'Authorization': 'Bearer '.concat(userStore.token)
+          Authorization: "Bearer ".concat(userStore.token),
         },
         data: {
           longLink,
-        }
+        },
       });
       links.value = links.value.push(data);
     } catch (error) {
       throw error.response;
     }
-  }
+  };
 
   const getLinks = async () => {
     try {
@@ -32,21 +31,20 @@ export const useLinkStore = defineStore("link", () => {
         method: "get",
         url: "links",
         headers: {
-          'Authorization': 'Bearer '.concat(userStore.token)
+          Authorization: "Bearer ".concat(userStore.token),
         },
-      })
-      console.log([...data.links]);
+      });
       links.value = links.value.push([...data.links]);
     } catch (error) {
       throw error.response;
     }
-  }
+  };
 
   getLinks();
 
   return {
     createLink,
     getLinks,
-    links
-  }
-})
+    links,
+  };
+});
