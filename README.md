@@ -1,3 +1,7 @@
+[![Deploy Pipeline](https://github.com/VictorEspejo/mevn-frontend/actions/workflows/pipeline.yml/badge.svg)](https://github.com/VictorEspejo/mevn-frontend/actions/workflows/pipeline.yml)
+
+
+
 # Quasar App (mevn-frontend)
 
 A Quasar Project
